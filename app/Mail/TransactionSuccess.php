@@ -20,7 +20,7 @@ class TransactionSuccess extends Mailable
      */
     public function __construct($data)
     {
-        $this->$data = $data;
+        $this->data = $data;
     }
 
     /**
@@ -32,8 +32,10 @@ class TransactionSuccess extends Mailable
     {
 
         return $this
-        ->from('nduujanadi51@gmail.com','NOMADS')
-        ->subject('Tiket NOMADS Anda')
-        ->view('email.transaction-success');
+        ->from('nduujanadi51@gmail.com','FLOATER')
+        ->subject('Tiket FLOATER Anda')
+        ->view('email.transaction-success', [
+            'transaction' => $this->data,
+        ]);
     }
 }

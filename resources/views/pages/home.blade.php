@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('title')
-    NOMADS
+    FLOATER
 @endsection
 
 @section('content')
     <!-- Header -->
-    <header class="text-center">
+    <header class="text-center" style="background-image: url('{{ asset('storage/' . $image->image) }}')">
         <h1>
             Explore The Beautiful World
             <br />

@@ -119,7 +119,8 @@
                                                     <tbody>
                                                         <tr>
                                                             <td style="width:140px;">
-                                                                <img height="auto" src="./assets/logo.png"
+                                                                <img height="auto"
+                                                                    src="{{ url('./frontend/images/logo@2fixx.png') }}"
                                                                     style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
                                                                     width="140" />
                                                             </td>
@@ -191,7 +192,8 @@
                                                     <tbody>
                                                         <tr>
                                                             <td style="width:550px;">
-                                                                <img height="auto" src="./assets/logo-login.jpg"
+                                                                <img height="auto"
+                                                                    src="{{ url('./storage/' . $transaction->travel_package->galleries[0]->image) }}"
                                                                     style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
                                                                     width="550" />
                                                             </td>
@@ -234,9 +236,10 @@
                                                                 style="font-size:0px;padding:10px 25px;padding-top:30px;padding-right:25px;padding-bottom:30px;padding-left:25px;word-break:break-word;">
                                                                 <div
                                                                     style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:28px;text-align:left;color:#071c4d;">
-                                                                    Hi, Sindu Aditya <br><br> Tiket Digital Kamu
+                                                                    Hi, {{ $data->user->name }} <br><br> Tiket Digital
+                                                                    Kamu
                                                                     Berhasil Di Cetak <br> Booking ID
-                                                                    <strong>#2098080</strong>
+                                                                    <strong>#{{ $data->id }} </strong>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -249,16 +252,21 @@
                                                                     <tr>
                                                                         <td colspan="3">Members</td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td><strong>Sindu Aditya</strong></td>
-                                                                        <td style="text-align: right;">Singapore, SG
-                                                                        </td>
-                                                                    </tr>
+
+                                                                    @foreach ($data->details as $item)
+                                                                        <tr>
+                                                                            <td><strong>{{ $item->username }}</strong>
+                                                                            </td>
+                                                                            <td style="text-align: right">
+                                                                                {{ $item->nationality }}</td>
+                                                                        </tr>
+                                                                    @endforeach
+                                                                    {{--
                                                                     <tr>
                                                                         <td><strong>Aydin Ilham</strong></td>
                                                                         <td style="text-align: right;">Singapore, SG
                                                                         </td>
-                                                                    </tr>
+                                                                    </tr> --}}
                                                                 </table>
                                                             </td>
                                                         </tr>
@@ -273,13 +281,14 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td><strong>Departure</strong></td>
-                                                                        <td style="text-align: right;">Borobudur,Jawa
-                                                                            Tengah
+                                                                        <td style="text-align: right;">
+                                                                            {{ $data->travel_package->title }}
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td><strong>Date and Time</strong></td>
-                                                                        <td style="text-align: right;">Thu, 20 Jan 2023
+                                                                        <td style="text-align: right;">
+                                                                            {{ $data->travel_package->departure_date }}
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -297,9 +306,9 @@
                                                                                 role="presentation"
                                                                                 style="border:none;border-radius:10px;cursor:auto;mso-padding-alt:10px 25px;background:#FF9E53;"
                                                                                 valign="middle">
-                                                                                <p
+                                                                                <a href="{{ url('checkout/' . $data->id) }}"
                                                                                     style="display:inline-block;background:#FF9E53;color:#ffffff;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:10px;">
-                                                                                    Check Detail </p>
+                                                                                    Check Detail </a>
                                                                             </td>
                                                                         </tr>
                                                                     </tbody>
@@ -349,7 +358,7 @@
                                                     <tr>
                                                         <td
                                                             style="font-size: 18px; padding-left: 10px; color:#071C4D; font-family= Assistant, Helvetica, Arial, sans-serif">
-                                                            support@nomads.id <br> 0895-2594-2455 </td>
+                                                            support@FLOATER.id <br> 0895-2594-2455 </td>
                                                     </tr>
                                                 </table>
                                             </td>
@@ -382,7 +391,7 @@
                                                 style="font-size:0px;padding:10px 25px;padding-top:30px;padding-right:25px;padding-bottom:0px;padding-left:25px;word-break:break-word;">
                                                 <div
                                                     style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:28px;text-align:center;color:#888B93;">
-                                                    2022 Nomads Copyright All Rights Reserved</div>
+                                                    2022 FLOATER Copyright All Rights Reserved</div>
                                             </td>
                                         </tr>
                                     </tbody>

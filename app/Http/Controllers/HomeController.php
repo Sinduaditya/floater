@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Gallery;
 use App\TravelPackage;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,11 @@ class HomeController extends Controller
     public function index()
     {
         $items = TravelPackage::with(['galleries'])->get();
+        $image = Gallery::orderBy(\DB::raw('rand()'))->limit(1)->first();
+
         return view('pages.home',[
-            'items' => $items
+            'items' => $items,
+            'image' => $image,
         ]);
     }
 }

@@ -7,17 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>@yield('title')</title>
 
-    <link rel="stylesheet" href="{{ url('frontend/styles/main.scss') }}" />
-    <link rel="stylesheet" href="{{ url('frontend/libraries/bootstrap/css/bootstrap.css') }}" />
-    <link rel="stylesheet" href="{{ url('frontend/styles/main.css') }}" />
+    @include('includes.admin.style')
 
 
 </head>
 
-<body>
+<body style="background-color: #071C4D;>
     @yield('content')
 
-    @include('includes.script')
+    @include('includes.admin.script')
 </body>
 
 </html>

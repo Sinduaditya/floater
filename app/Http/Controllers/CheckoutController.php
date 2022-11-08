@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Mail;
 use App\Mail\TransactionSuccess;
 
 use App\Transaction;
@@ -11,6 +10,7 @@ use App\TravelPackage;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class CheckoutController extends Controller
 {
@@ -100,11 +100,11 @@ class CheckoutController extends Controller
         $transaction = Transaction::with(['details','travel_package.galleries','user'])
         ->findOrFail($id);
         $transaction->transaction_status = 'PENDING';
-
+        // dd($transaction);
         $transaction->save();
 
         // Kirim email ke user e-ticketnya
-        Mail::to($transaction->user())->send(
+        Mail::to($transaction->user)->send(
             new TransactionSuccess($transaction)
         );
 
