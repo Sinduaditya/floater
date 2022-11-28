@@ -37,7 +37,7 @@
                             @endif
                             <h1>Who is Going?</h1>
                             <p>
-                                Trip to Ubud, Bali, Indonesia
+                                Trip to {{ $item->travel_package->title }} - {{ $item->travel_package->location }}
                             </p>
                             <div class="attendee">
                                 <table class="table table-responsive-sm text-center">
@@ -89,7 +89,8 @@
                             </div>
                             <div class="member mt-3">
                                 <h2>Add Member</h2>
-                                <form class="form-inline" method="post" action="{{ route('checkout-create', $item->id) }}">
+                                <form class="form-inline" method="post"
+                                    action="{{ route('checkout-create', $item->id) }}">
                                     @csrf
                                     <label for="username" class="sr-only">Name</label>
                                     <input type="text" name="username" class="form-control mb-2 mr-sm-2"

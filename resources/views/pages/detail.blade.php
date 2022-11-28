@@ -44,7 +44,7 @@
                                     </div>
                                 </div>
                             @endif
-                            <h2>Tentang Wisata</h2>
+                            <h2>About Travel</h2>
                             {!! $item->about !!}
                             <div class="features row">
                                 <div class="col-md-4">
@@ -80,15 +80,6 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card card-details card-right">
-                            <h2>Members are going</h2>
-                            <div class="members my-2">
-                                <img src="/frontend/images/member-1.png" class="member-image mr-1" />
-                                <img src="/frontend/images/member-2.png" class="member-image mr-1" />
-                                <img src="/frontend/images/member-3.png" class="member-image mr-1" />
-                                <img src="/frontend/images/member-4.png" class="member-image mr-1" />
-                                <img src="/frontend/images/member-5.png" class="member-image mr-1" />
-                            </div>
-                            <hr />
                             <h2>Trip Informations</h2>
                             <table class="trip-informations">
                                 <tr>
@@ -116,6 +107,21 @@
                                     </td>
                                 </tr>
                             </table>
+                            <h2 class="pt-3 mb-0">Syarat Dan Ketentuan</h2>
+                            <ul>
+                                <li>
+                                    <h6>Hotel Included</h6>
+                                </li>
+                                <li>
+                                    <h6>Entrance Ticket</h6>
+                                </li>
+                                <li>
+                                    <h6>Transportation</h6>
+                                </li>
+                                <li>
+                                    <h6>Meal Included</h6>
+                                </li>
+                            </ul>
                         </div>
                         <div class="join-container">
                             @auth

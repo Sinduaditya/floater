@@ -87,5 +87,5 @@
             </div>
 
         </div>
-    </div>q
+    </div>
 @endsection

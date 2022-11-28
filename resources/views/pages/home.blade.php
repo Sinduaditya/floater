@@ -8,15 +8,10 @@
     <!-- Header -->
     <header class="text-center" style="background-image: url('{{ asset('storage/' . $image->image) }}')">
         <h1>
-            Explore The Beautiful World
+            Explore The Beautiful Indonesia
             <br />
-            As Easy One Click
+            With One Click
         </h1>
-        <p class="mt-3">
-            You will see beautiful
-            <br />
-            moment you never see before
-        </p>
         <a href="#popular" class="btn btn-get-started px-4 mt-4">
             Get started
         </a>
@@ -49,11 +44,12 @@
                 <div class="row">
                     <div class="col text-center section-popular-heading">
                         <h2>Wisata Popular</h2>
-                        <p>
-                            Something that you never try
-                            <br />
-                            before in this world
-                        </p>
+                        <h3 style="color: #ffff;font-family: 'Playfair Display';">
+                            Hello <strong>
+                                {{ Auth::user()->name }}
+                            </strong> Mau Berlibur
+                            kemana ?
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -119,8 +115,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
                             <div class="testiominal-content">
-                                <img src="frontend/images/testimonial-1.png" alt="User" class="mb-4 rounded-circle" />
-                                <h3 class="mb-4">Angga Risky</h3>
+                                <h3 class="mb-4">Sindu Aditya Janadi</h3>
                                 <p class="testimonial">
                                     “ It was glorious and I could not stop to say wohooo for
                                     every single moment Dankeeeeee “
@@ -135,8 +130,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
                             <div class="testiominal-content">
-                                <img src="frontend/images/testimonial-2.png" alt="User" class="mb-4 rounded-circle" />
-                                <h3 class="mb-4">Shayna</h3>
+                                <h3 class="mb-4">Cindy Ardelia</h3>
                                 <p class="testimonial">
                                     “ The trip was amazing and I saw something beautiful in that
                                     Island that makes me want to learn more “
@@ -151,8 +145,8 @@
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
                             <div class="testiominal-content">
-                                <img src="frontend/images/testimonial-3.png" alt="User" class="mb-4 rounded-circle" />
-                                <h3 class="mb-4">Shabrina</h3>
+                                {{-- <img src="frontend/images/testimonial-3.png" alt="User" class="mb-4 rounded-circle" /> --}}
+                                <h3 class="mb-4">Wildan Surya</h3>
                                 <p class="testimonial">
                                     “ I loved it when the waves was shaking harder — I was
                                     scared too “
@@ -160,7 +154,7 @@
                             </div>
                             <hr />
                             <p class="trip-to mt-2">
-                                Trip to Karimun Jawa
+                                Trip to Tangkuban Prahu
                             </p>
                         </div>
                     </div>

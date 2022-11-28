@@ -33,7 +33,7 @@ class TransactionSuccess extends Mailable
 
         return $this
         ->from('nduujanadi51@gmail.com','FLOATER')
-        ->subject('Tiket FLOATER Anda')
+        ->subject('Tiket Floater Anda')
         ->view('email.transaction-success', [
             'transaction' => $this->data,
         ]);

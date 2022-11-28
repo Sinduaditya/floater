@@ -120,7 +120,7 @@
                                                         <tr>
                                                             <td style="width:140px;">
                                                                 <img height="auto"
-                                                                    src="{{ url('./frontend/images/logo@2fixx.png') }}"
+                                                                    src="{{ url('./frontend/images/logo-floater.jpeg') }}"
                                                                     style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
                                                                     width="140" />
                                                             </td>

@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white  ">
         <a href="{{ route('home') }}" class="navbar-brand">
             <img src="{{ url('frontend/images/logo-floater.jpeg') }}" class="p-0" alt="Logo FLOATER" />
         </a>
@@ -15,6 +15,12 @@
                 </li>
                 <li class="nav-item mx-md-2">
                     <a href="#popular" class="nav-link">Paket Travel</a>
+                </li>
+                <li class="nav-item mx-md-2">
+                    <a href="#popular" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item mx-md-2">
+                    <a href="#popular" class="nav-link">About</a>
                 </li>
             </ul>
 
